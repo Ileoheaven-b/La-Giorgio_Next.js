@@ -4,8 +4,18 @@ import styles from "../../css_components/menu.module.css";
 const LoadMenu = () => {
   const [category, setCategory] = useState("categoryList");
 
+  const checkSStorage = () => {
+    if (typeof window !== "undefined") {
+      if (sessionStorage.getItem("cart")) {
+        return 0;
+      } else {
+        return 1;
+      }
+    }
+  };
+
   const addToCart = (arg) => {
-    if (!sessionStorage.getItem("cart")) {
+    if (checkSStorage()) {
       sessionStorage.setItem("cart", JSON.stringify([arg]));
     } else {
       const arr = JSON.parse(sessionStorage["cart"]);

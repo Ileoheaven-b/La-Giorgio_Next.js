@@ -2,15 +2,23 @@ import { Component, useEffect, useState } from "react";
 import styles from "../../css_components/cart.module.css";
 
 const LoadCart = () => {
-  //Last item not refreshing component on removal !!!!
-  if (
-    sessionStorage.getItem("cart") &&
-    sessionStorage.getItem("cart") != "[]"
-  ) {
-    const [storageArray, setStorageArray] = useState(
-      JSON.parse(sessionStorage["cart"])
-    );
+  const [storageArray, setStorageArray] = useState(
+    JSON.parse(typeof window !== "undefined" ? sessionStorage["cart"] : null)
+  );
 
+  const checkSStorage = () => {
+    if (typeof window !== "undefined") {
+      if (
+        sessionStorage.getItem("cart") &&
+        sessionStorage.getItem("cart") != "[]"
+      ) {
+        return 1;
+      } else {
+        return 0;
+      }
+    }
+  };
+  if (checkSStorage()) {
     const removeCartItem = (e) => {
       sessionStorage.removeItem("cart");
       sessionStorage.setItem(
