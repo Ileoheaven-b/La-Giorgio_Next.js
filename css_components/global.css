@@ -1,0 +1,103 @@
+html {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  height: 100vh;
+  width: 100vw;
+  margin: 0;
+  background-color: #181a1b;
+  overflow-x: hidden;
+}
+
+#__next {
+  min-height: 100vh;
+  display: flex;
+  flex-direction: column;
+  justify-content: space-between;
+}
+
+#cityPrompt {
+  background-color: black;
+  width: 100vw;
+  color: rgba(255, 255, 255, 0.802);
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 700;
+  font-size: max(0.8rem, 0.8vw);
+  padding: 10px;
+  text-align: center;
+}
+
+#navBarContainer {
+  background-color: rgba(24, 26, 27, 0.7);
+  position: sticky;
+  top: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  border-bottom: #363a3d;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+}
+
+#navBar {
+  width: calc(min(950px, 90vw));
+  display: flex;
+  background-color: rgba(12, 12, 12, 0);
+  padding: 15px;
+  justify-content: space-between;
+  backdrop-filter: blur(3px);
+}
+
+.BTN {
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 700;
+  font-size: max(1.2rem, 1vw);
+  color: #ffffff;
+  padding: 5px;
+  margin: 0;
+  border: 0;
+  background-color: rgba(12, 12, 12, 0);
+}
+
+#homeBTN {
+  font-size: max(1.2rem, 1.3vw);
+}
+
+#menuBTN,
+#contactBTN,
+#cartBTN {
+  color: #bfbfbf;
+  transition: color 0.3s linear;
+}
+
+#menuBTN:hover,
+#contactBTN:hover,
+#cartBTN:hover {
+  color: #ffffff;
+}
+
+.navContainer {
+  display: flex;
+  gap: 5vw;
+  color: #bfbfbf;
+}
+
+.BTN:hover {
+  cursor: pointer;
+}
+
+#footer {
+  width: 100vw;
+  margin-top: max(50px, 4vh);
+  border-top: #363a3d;
+  border-top-style: solid;
+  border-top-width: 1px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #bfbfbf;
+}
