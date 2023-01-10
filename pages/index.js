@@ -9,6 +9,12 @@ export default function Home() {
   const [tab, setTab] = useState("home");
   const [cityIsKnown, setCityPrompt] = useState(1); // To add: Local Storage
 
+  if (typeof window !== "undefined") {
+    if (!sessionStorage.getItem("cart")) {
+      sessionStorage.setItem("cart", "[]");
+    }
+  }
+
   const CityPrompt = () => {
     if (cityIsKnown) {
       return (
