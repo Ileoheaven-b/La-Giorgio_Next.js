@@ -15,7 +15,7 @@
   border-width: 1px;
   margin-right: 30px;
   height: fit-content;
-  width: min(500px, 50vw);
+  width: min(600px, 50vw);
   overflow-wrap: break-word;
   display: flex;
   flex-direction: column;
@@ -41,17 +41,30 @@
   font-family: "Courier New", Courier, monospace;
   font-size: 20px;
   transition: color 0.3s linear;
-  transition: font-size 0.3s linear;
 }
 
 .cartItemBTN:hover {
   color: rgb(255, 95, 95);
   cursor: pointer;
-  font-size: 25px;
   font-family: "Courier New", Courier, monospace;
 }
 .priceContainer {
   text-align: center;
   font-size: 18px;
   padding: 15px;
+}
+
+.arrowBTN {
+  background-color: rgba(12, 12, 12, 0);
+  border-style: none;
+  font-size: 20px;
+  font-weight: 700;
+  transition: color 0.3s linear;
+  color: #bfbfbf;
+  font-size: 25px;
+}
+
+.arrowBTN:hover {
+  cursor: pointer;
+  color: white;
 }

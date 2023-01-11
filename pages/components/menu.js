@@ -20,7 +20,17 @@ const LoadMenu = () => {
     } else {
       const arr = JSON.parse(sessionStorage["cart"]);
       sessionStorage.removeItem("cart");
-      arr.push(arg);
+      let bool = 1;
+      arr.forEach((element) => {
+        if (element.name == arg.name) {
+          bool = 0;
+          element.qnt++;
+        }
+      });
+      if (bool) {
+        arg.qnt = 1;
+        arr.push(arg);
+      }
       sessionStorage.setItem("cart", JSON.stringify(arr));
     }
   };
@@ -84,7 +94,12 @@ const LoadMenu = () => {
               Prosciutto
               <button
                 onClick={() =>
-                  addToCart({ name: "Prosciutto Pizza", price: 19, id: -1 })
+                  addToCart({
+                    name: "Prosciutto Pizza",
+                    price: 19,
+                    id: -1,
+                    qnt: 0,
+                  })
                 }
                 className={styles.addToCartBTN}
               >
@@ -99,6 +114,7 @@ const LoadMenu = () => {
                     name: "Quattro Formaggi Pizza",
                     price: 20,
                     id: -1,
+                    qnt: 0,
                   })
                 }
                 className={styles.addToCartBTN}
@@ -114,6 +130,7 @@ const LoadMenu = () => {
                     name: "Quattro Stagione Pizza",
                     price: 18,
                     id: -1,
+                    qnt: 0,
                   })
                 }
                 className={styles.addToCartBTN}
@@ -125,7 +142,12 @@ const LoadMenu = () => {
               Diavola
               <button
                 onClick={() =>
-                  addToCart({ name: "Diavola Pizza", price: 19, id: -1 })
+                  addToCart({
+                    name: "Diavola Pizza",
+                    price: 19,
+                    id: -1,
+                    qnt: 0,
+                  })
                 }
                 className={styles.addToCartBTN}
               >
@@ -136,7 +158,12 @@ const LoadMenu = () => {
               Giorgio
               <button
                 onClick={() =>
-                  addToCart({ name: "Giorgio Pizza", price: 22, id: -1 })
+                  addToCart({
+                    name: "Giorgio Pizza",
+                    price: 22,
+                    id: -1,
+                    qnt: 0,
+                  })
                 }
                 className={styles.addToCartBTN}
               >
@@ -152,7 +179,12 @@ const LoadMenu = () => {
               Carbonara
               <button
                 onClick={() =>
-                  addToCart({ name: "Carbonara Pasta", price: 25, id: -1 })
+                  addToCart({
+                    name: "Carbonara Pasta",
+                    price: 25,
+                    id: -1,
+                    qnt: 0,
+                  })
                 }
                 className={styles.addToCartBTN}
               >
@@ -163,7 +195,12 @@ const LoadMenu = () => {
               Bolognese
               <button
                 onClick={() =>
-                  addToCart({ name: "Bolognese Pasta", price: 24, id: -1 })
+                  addToCart({
+                    name: "Bolognese Pasta",
+                    price: 24,
+                    id: -1,
+                    qnt: 0,
+                  })
                 }
                 className={styles.addToCartBTN}
               >
@@ -174,7 +211,12 @@ const LoadMenu = () => {
               Seafood
               <button
                 onClick={() =>
-                  addToCart({ name: "Seafood Pasta", price: 26, id: -1 })
+                  addToCart({
+                    name: "Seafood Pasta",
+                    price: 26,
+                    id: -1,
+                    qnt: 0,
+                  })
                 }
                 className={styles.addToCartBTN}
               >
@@ -185,7 +227,7 @@ const LoadMenu = () => {
               Shrimp
               <button
                 onClick={() =>
-                  addToCart({ name: "Shrimp Pasta", price: 27, id: -1 })
+                  addToCart({ name: "Shrimp Pasta", price: 27, id: -1, qnt: 0 })
                 }
                 className={styles.addToCartBTN}
               >
@@ -196,7 +238,12 @@ const LoadMenu = () => {
               Kalamata
               <button
                 onClick={() =>
-                  addToCart({ name: "Kalamata Pasta", price: 23, id: -1 })
+                  addToCart({
+                    name: "Kalamata Pasta",
+                    price: 23,
+                    id: -1,
+                    qnt: 0,
+                  })
                 }
                 className={styles.addToCartBTN}
               >
@@ -212,7 +259,7 @@ const LoadMenu = () => {
               Ceaser
               <button
                 onClick={() =>
-                  addToCart({ name: "Ceaser Salad", price: 15, id: -1 })
+                  addToCart({ name: "Ceaser Salad", price: 15, id: -1, qnt: 0 })
                 }
                 className={styles.addToCartBTN}
               >
@@ -228,7 +275,12 @@ const LoadMenu = () => {
               Tiramisu
               <button
                 onClick={() =>
-                  addToCart({ name: "Tiramisu Dessert", price: 25, id: -1 })
+                  addToCart({
+                    name: "Tiramisu Dessert",
+                    price: 25,
+                    id: -1,
+                    qnt: 0,
+                  })
                 }
                 className={styles.addToCartBTN}
               >
@@ -239,7 +291,12 @@ const LoadMenu = () => {
               Lava Cake
               <button
                 onClick={() =>
-                  addToCart({ name: "Lava Cake Dessert", price: 30, id: -1 })
+                  addToCart({
+                    name: "Lava Cake Dessert",
+                    price: 30,
+                    id: -1,
+                    qnt: 0,
+                  })
                 }
                 className={styles.addToCartBTN}
               >
@@ -250,7 +307,12 @@ const LoadMenu = () => {
               Cheese Cake
               <button
                 onClick={() =>
-                  addToCart({ name: "Cheese Cake Dessert", price: 23, id: -1 })
+                  addToCart({
+                    name: "Cheese Cake Dessert",
+                    price: 23,
+                    id: -1,
+                    qnt: 0,
+                  })
                 }
                 className={styles.addToCartBTN}
               >
@@ -266,7 +328,7 @@ const LoadMenu = () => {
               Pepsi
               <button
                 onClick={() =>
-                  addToCart({ name: "Pepsi Drink", price: 8, id: -1 })
+                  addToCart({ name: "Pepsi Drink", price: 8, id: -1, qnt: 0 })
                 }
                 className={styles.addToCartBTN}
               >
@@ -277,7 +339,7 @@ const LoadMenu = () => {
               Coke
               <button
                 onClick={() =>
-                  addToCart({ name: "Coke Drink", price: 8, id: -1 })
+                  addToCart({ name: "Coke Drink", price: 8, id: -1, qnt: 0 })
                 }
                 className={styles.addToCartBTN}
               >
@@ -288,7 +350,12 @@ const LoadMenu = () => {
               Freedom
               <button
                 onClick={() =>
-                  addToCart({ name: "Freedom Drink", price: 69, id: -1 })
+                  addToCart({
+                    name: "Freedom Drink",
+                    price: 69,
+                    id: -1,
+                    qnt: 0,
+                  })
                 }
                 className={styles.addToCartBTN}
               >
