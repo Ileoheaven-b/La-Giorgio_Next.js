@@ -60,9 +60,12 @@ const LoadCart = () => {
       });
       return (
         <div className={styles.priceContainer}>
-          Total: {price >= 60 ? price : price}{" "}
-          {price < 60 ? "+ 5 Delivery" : ""} RON. <p />{" "}
-          {price >= 60 ? "" : "Delivery applies for orders under 60 RON."}
+          Total: {price >= 60 ? price : price} {price < 60 ? "+ 5 =" : null}{" "}
+          {price < 60 ? price + 5 : null} {price < 60 ? "RON" : null}
+          <p />{" "}
+          {price >= 60
+            ? ""
+            : "5 RON delivery fee only applies for orders under 60 RON."}
         </div>
       );
     };
@@ -86,7 +89,7 @@ const LoadCart = () => {
               >
                 {">"}
               </button>{" "}
-              {e.name} | Price: {e.price * e.qnt} RON &nbsp;
+              {e.name} {e.type} | Price: {e.price * e.qnt} RON &nbsp;
               <button
                 className={styles.cartItemBTN}
                 onClick={() => removeCartItem(e)}
