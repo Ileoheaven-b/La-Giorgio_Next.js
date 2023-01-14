@@ -1,4 +1,4 @@
-import styles from "../../css_components/home.module.css";
+import styles from "../styles/home.module.css";
 
 const LoadHome = () => {
   return (

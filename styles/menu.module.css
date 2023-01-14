@@ -109,3 +109,17 @@
   color: #ffffff;
   cursor: pointer;
 }
+
+.arrowBTN {
+  background-color: rgba(12, 12, 12, 0);
+  border-style: none;
+  font-size: 20px;
+  font-weight: 700;
+  transition: color 0.3s linear;
+  color: #bfbfbf;
+}
+
+.arrowBTN:hover {
+  cursor: pointer;
+  color: white;
+}

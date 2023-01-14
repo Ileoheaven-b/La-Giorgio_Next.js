@@ -1,9 +1,9 @@
 import Head from "next/head";
 import { useState } from "react";
-import LoadCart from "./components/cart";
-import LoadContact from "./components/contact";
-import LoadHome from "./components/home";
-import LoadMenu from "./components/menu";
+import LoadCart from "../components/cart";
+import LoadContact from "../components/contact";
+import LoadHome from "../components/home";
+import LoadMenu from "../components/menu";
 
 export default function Home() {
   const [tab, setTab] = useState("home");

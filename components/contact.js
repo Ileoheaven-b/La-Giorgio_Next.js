@@ -1,4 +1,4 @@
-import styles from "../../css_components/contact.module.css";
+import styles from "../styles/contact.module.css";
 
 const LoadContact = () => {
   return (

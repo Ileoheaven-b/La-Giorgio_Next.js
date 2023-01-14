@@ -1,5 +1,5 @@
 import { Component, useEffect, useState } from "react";
-import styles from "../../css_components/cart.module.css";
+import styles from "../styles/cart.module.css";
 
 const LoadCart = () => {
   const [storageArray, setStorageArray] = useState(
