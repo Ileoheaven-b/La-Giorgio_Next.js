@@ -1,0 +1,65 @@
+.cartPopup {
+  position: absolute;
+  background-color: #1b1d1e;
+  border-radius: 10px;
+  border-color: #363a3d;
+  border-style: solid;
+  border-width: 1px;
+  border-top-width: 0;
+  padding: 14px;
+  width: min(600px, 50vw);
+  right: 0;
+  top: 53px;
+  backdrop-filter: blur(3px);
+}
+
+.cityPrompt {
+  background-color: black;
+  width: 100vw;
+  color: rgba(255, 255, 255, 0.802);
+  font-family: "Courier New", Courier, monospace;
+  font-weight: 700;
+  font-size: max(0.8rem, 0.8vw);
+  padding: 10px;
+  text-align: center;
+}
+
+.navBarContainer {
+  background-color: rgba(24, 26, 27, 0.7);
+  position: sticky;
+  top: 0;
+  width: 100vw;
+  display: flex;
+  justify-content: center;
+  border-bottom: #363a3d;
+  border-bottom-style: solid;
+  border-bottom-width: 1px;
+  text-align: center;
+}
+
+.navBar {
+  width: calc(min(950px, 90vw));
+  display: flex;
+  background-color: rgba(12, 12, 12, 0);
+  padding: 15px;
+  justify-content: space-between;
+  backdrop-filter: blur(3px);
+}
+
+.navContainer {
+  display: flex;
+  gap: 5vw;
+  color: #bfbfbf;
+}
+
+.footer {
+  width: 100vw;
+  margin-top: max(50px, 4vh);
+  border-top: #363a3d;
+  border-top-style: solid;
+  border-top-width: 1px;
+  text-align: center;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #bfbfbf;
+}

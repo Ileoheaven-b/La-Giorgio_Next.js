@@ -20,36 +20,14 @@ body {
   justify-content: space-between;
 }
 
-#cityPrompt {
-  background-color: black;
-  width: 100vw;
-  color: rgba(255, 255, 255, 0.802);
-  font-family: "Courier New", Courier, monospace;
-  font-weight: 700;
-  font-size: max(0.8rem, 0.8vw);
-  padding: 10px;
-  text-align: center;
+.link {
+  text-decoration: none;
+  color: #bfbfbf;
+  transition: color 0.3s linear;
 }
 
-#navBarContainer {
-  background-color: rgba(24, 26, 27, 0.7);
-  position: sticky;
-  top: 0;
-  width: 100vw;
-  display: flex;
-  justify-content: center;
-  border-bottom: #363a3d;
-  border-bottom-style: solid;
-  border-bottom-width: 1px;
-}
-
-#navBar {
-  width: calc(min(950px, 90vw));
-  display: flex;
-  background-color: rgba(12, 12, 12, 0);
-  padding: 15px;
-  justify-content: space-between;
-  backdrop-filter: blur(3px);
+.link:hover {
+  color: white;
 }
 
 .BTN {
@@ -63,41 +41,20 @@ body {
   background-color: rgba(12, 12, 12, 0);
 }
 
-#homeBTN {
+.homeBTN {
   font-size: max(1.2rem, 1.3vw);
 }
 
-#menuBTN,
-#contactBTN,
-#cartBTN {
+.menuBTN,
+.contactBTN,
+.cartBTN {
   color: #bfbfbf;
   transition: color 0.3s linear;
+  position: relative;
 }
 
-#menuBTN:hover,
-#contactBTN:hover,
-#cartBTN:hover {
+.menuBTN:hover,
+.contactBTN:hover,
+.cartBTN:hover {
   color: #ffffff;
-}
-
-.navContainer {
-  display: flex;
-  gap: 5vw;
-  color: #bfbfbf;
-}
-
-.BTN:hover {
-  cursor: pointer;
-}
-
-#footer {
-  width: 100vw;
-  margin-top: max(50px, 4vh);
-  border-top: #363a3d;
-  border-top-style: solid;
-  border-top-width: 1px;
-  text-align: center;
-  padding-top: 20px;
-  padding-bottom: 20px;
-  color: #bfbfbf;
 }
